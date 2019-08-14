@@ -1,0 +1,83 @@
+/* 
+    Created on : 06/11/2014, 04:35:27
+    Author     : Leonam Bernini (leonamb19@gmail.com)
+*/
+
+.add-to-cart-floating,
+.add-to-cart-floating-closed,
+.add-to-cart-floating #open-close-box-floating:before,
+#add-to-cart-floating .add-to-cart-buttons,
+#add-to-cart-floating .add-to-cart-buttons .button{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.add-to-cart-floating{
+    background-color: #f7f7f7;
+    border-right: 3px solid #d4d4d4;
+    border-radius: 0 0 0 4px;
+    display: none;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 10%;
+    width: 200px;
+    z-index: 99998;
+    -webkit-transition: 150ms all linear 0s; -moz-transition: 150ms all linear 0s; -o-transition: 150ms all linear 0s; transition: 150ms all linear 0s;
+}
+.add-to-cart-floating-closed{
+    right: -200px;
+    -webkit-transition: 150ms all linear 0s; -moz-transition: 150ms all linear 0s; -o-transition: 150ms all linear 0s; transition: 150ms all linear 0s;
+}
+.add-to-cart-floating #open-close-box-floating:before{
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #d4d4d4;
+    border-radius: 4px 0 0 4px;
+    content: "˃";
+    color: #2a2a2a;
+    cursor: pointer;
+    display: block;
+    font: 700 15px/24px Arial, sans-serif;
+    height: 25px;
+    left: -25px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 25px;
+    z-index: 99999;
+    -webkit-transition: 150ms all linear 0s; -moz-transition: 150ms all linear 0s; -o-transition: 150ms all linear 0s; transition: 150ms all linear 0s;
+}
+.add-to-cart-floating #open-close-box-floating:hover:before,
+.add-to-cart-floating-closed #open-close-box-floating:before{
+    display: block;
+    background-color: #009609;
+    border-bottom: 2px solid #002e02;
+    color: #fff;
+    -webkit-transition: 150ms all linear 0s; -moz-transition: 150ms all linear 0s; -o-transition: 150ms all linear 0s; transition: 150ms all linear 0s;
+}
+.add-to-cart-floating-closed #open-close-box-floating:before{
+    content: "<";
+}
+
+#add-to-cart-floating .price-info,
+#add-to-cart-floating .price-box{ display: block; float: none; max-width: 100%; margin: 0; padding: 0; text-align: left; width: 100%; }
+#add-to-cart-floating .old-price,
+#add-to-cart-floating .special-price{ display: block; text-align: left; padding: 3px 0; }
+#add-to-cart-floating .old-price{ color: #d4d4d4; font-size: 12px; line-height: 15px; text-decoration: line-through; }
+#add-to-cart-floating .special-price{ color: #2a2a2a; font-size: 18px; line-height: 22px; }
+#add-to-cart-floating .special-price .price{ font-weight: 700; }
+
+#add-to-cart-floating .add-to-cart-buttons{
+    border-top: 1px solid #f7f7f7;
+    display: block;
+    float: none;
+    margin-top: 10%;
+    padding-top: 10px;
+    text-align: center;
+}
+#add-to-cart-floating .add-to-cart-buttons .button{
+    display: block;
+    float: none;
+    width: 100%;
+}

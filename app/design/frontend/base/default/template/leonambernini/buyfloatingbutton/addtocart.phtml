@@ -1,0 +1,18 @@
+<?php $_product = $this->getProduct(); ?>
+<?php $buttonTitle = $this->__('Add to Cart'); ?>
+<?php if($_product->isSaleable()): ?>
+    <?php if( Mage::getStoreConfig("buyfloatingbutton/general/enable") ): ?>
+    <div id="add-to-cart-floating" class="add-to-cart-floating">
+        <span id="open-close-box-floating" class="open-close-box-floating" title="<?php echo $this->__('Buy Floating Button') ?>"></span><!-- .open-close-box-floating -->
+        <span class="price-info-floating">
+            <?php echo $this->getPriceHtml($_product, false, '-floating') ?>
+            <?php echo $this->getChildHtml('bundle_prices') ?>
+            <?php echo $this->getTierPriceHtml() ?>
+        </span><!-- .box-prices-floating -->
+        <div class="add-to-cart-buttons">
+            <button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart-floating" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
+            <?php echo $this->getChildHtml('', true, true) ?>
+        </div>
+    </div><!-- add-to-cart-floating -->
+    <?php endif; ?>
+<?php endif; ?>

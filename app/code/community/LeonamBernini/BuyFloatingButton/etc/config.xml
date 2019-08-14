@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <LeonamBernini_BuyFloatingButton>
+            <version>1.0.0</version>
+        </LeonamBernini_BuyFloatingButton>
+    </modules>
+    
+    <frontend>
+        <routers>
+            <buyfloatingbutton>
+                <use>standard</use>
+                <args>
+                    <module>LeonamBernini_BuyFloatingButton</module>
+                    <frontName>buyfloatingbutton</frontName>
+                </args>
+            </buyfloatingbutton>
+        </routers>
+        <translate>
+            <modules>
+                <LeonamBernini_BuyFloatingButton>
+                    <files>
+                        <default>LeonamBernini_BuyFloatingButton.csv</default>
+                    </files>
+                </LeonamBernini_BuyFloatingButton>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <buyfloatingbutton>
+                    <file>leonambernini/buyfloatingbutton.xml</file>
+                </buyfloatingbutton>
+            </updates>
+        </layout>
+    </frontend>
+    
+    <adminhtml>
+        <layout>
+            <updates>
+                <leonambernini>
+                    <file>buyfloatingbutton/buyfloatingbutton.xml</file>
+                </leonambernini>
+            </updates>
+        </layout>
+        
+        <translate>
+            <modules>
+                <LeonamBernini_BuyFloatingButton>
+                    <files>
+                        <default>LeonamBernini_BuyFloatingButton.csv</default>
+                    </files>
+                </LeonamBernini_BuyFloatingButton>
+            </modules>
+        </translate>
+        
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <buyfloatingbutton>
+                                            <title>BuyFloatingButton Settings - NEX</title>
+                                        </buyfloatingbutton>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        
+    </adminhtml>
+    
+    <global>
+        
+        <resources>
+            <buyfloatingbutton_setup>
+                <setup>
+                    <module>LeonamBernini_BuyFloatingButton</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </buyfloatingbutton_setup>
+            <buyfloatingbutton_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </buyfloatingbutton_write>
+            <buyfloatingbutton_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </buyfloatingbutton_read>
+        </resources>
+        
+        <blocks>
+            <buyfloatingbutton>
+                <class>LeonamBernini_BuyFloatingButton_Block</class>
+            </buyfloatingbutton>
+        </blocks>
+        
+        <helpers>
+            <buyfloatingbutton>
+                <class>LeonamBernini_BuyFloatingButton_Helper</class>
+            </buyfloatingbutton>
+        </helpers>
+    </global>
+    
+    <default>
+        <buyfloatingbutton>
+            <general>
+                <enable>0</enable>
+            </general>
+        </buyfloatingbutton>
+    </default>
+    
+    <admin>
+        <routers>
+            <buyfloatingbutton>
+                <use>admin</use>
+                <args>
+                    <module>LeonamBernini_BuyFloatingButton</module>
+                    <frontName>buyfloatingbutton</frontName>
+                </args>
+            </buyfloatingbutton>
+        </routers>
+    </admin>
+    
+</config>

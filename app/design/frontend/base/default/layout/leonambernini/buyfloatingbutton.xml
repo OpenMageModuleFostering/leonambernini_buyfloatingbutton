@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <catalog_product_view>
+        <reference name="head">
+            <action method="addJs">
+                <script>leonam_bernini/buyfloatingbutton/buybutton.js</script>
+            </action>
+            <action method="addCss">
+                <stylesheet>leonam_bernini/buyfloatingbutton/css/buybutton.css</stylesheet>
+            </action>
+        </reference>
+        <reference name="product.info.form">         
+            <block type="buyfloatingbutton/buyfloatingbutton" name="leonambernini.buyfloatingbutton" template="leonambernini/buyfloatingbutton/addtocart.phtml" output="toHtml"/>      
+        </reference>
+    </catalog_product_view>
+</layout>
