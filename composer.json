@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/leonambernini_buyfloatingbutton",
+    "name": "OpenMageModuleFostering\/leonambernini_buyfloatingbutton",
     "type": "magento-module",
     "license": "Academic-Free-License-3.0",
     "homepage": "",
     "description": "Buy Floating Button extension for magento",
     "authors": [
-    {
-        "name": "Leonam Bernini",
-        "email": "leonam.b@hotmail.com"
-    }
-],
+        {
+            "name": "Leonam Bernini",
+            "email": "leonam.b@hotmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
